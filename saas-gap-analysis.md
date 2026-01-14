@@ -87,22 +87,29 @@ The market research suggests an **18-month strategic window** before competitors
 **Current State:** None
 **Required:** Full billing infrastructure
 
-Per the market research, the pricing model should be **hybrid**:
+See **[pricing-model.md](./pricing-model.md)** for the complete pricing specification.
 
-| Tier | Price | Features |
-|------|-------|----------|
-| Free/Hobby | $0-5/mo | 1-2 agents, limited VMs, community support |
-| Pro | $19-25/user/mo | Multiple agents, autoscaling, chat support |
-| Organization | $29-70/user/mo | SSO/SAML, audit logs, compliance |
-| Enterprise | $500+/mo | Custom SLAs, dedicated support |
+**Summary:** GitHub-style hybrid model with tiered subscriptions + add-on packs:
+
+| Tier | Price | Key Limits |
+|------|-------|------------|
+| Free | $0/mo | 1 agent, 3 VMs, 25 deployments/mo |
+| Pro | $29/mo | 3 agents, 15 VMs, 200 deployments/mo |
+| Team | $79/mo | 10 agents, 50 VMs, 1000 deployments/mo |
+| Enterprise | Custom | Unlimited, SSO/SAML, dedicated support |
+
+**Add-on packs** (Pro/Team tiers):
+- +3 Agents ($15/mo), +10 Agents ($40/mo)
+- +10 VMs ($20/mo), +25 VMs ($45/mo), +50 VMs ($80/mo)
+- +5 Members ($10/mo), +15 Members ($25/mo)
+- Unlimited Deployments ($35/mo)
 
 **Implementation needs:**
-- Usage metering (VMs, agents, deployments, bandwidth)
-- Stripe/payment integration
-- Subscription management
-- Usage-based billing calculations
-- Invoice generation
-- Trial period management (market research suggests ≤7 days optimal)
+- Usage metering (VMs, agents, deployments, team members)
+- Stripe/payment integration with subscription items for add-ons
+- Real-time usage tracking with soft/hard limits
+- Invoice generation via Stripe
+- Trial period management (7-day free trial)
 
 ---
 
