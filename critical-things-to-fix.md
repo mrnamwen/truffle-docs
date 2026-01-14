@@ -14,3 +14,5 @@
 - Consider adding a template group filter to the 'Commands' tab  
 - The deploy tab does not show the correct git info, instead reporting as 'git@github.com:org/repo.git'
 - On 'Add Hypervisor', Proxmox is falsy marked as only supporting 7.x and 8.x, but 9.x has since released and is fully functional
+- Need some kind of documentation hub without auth, also LLM-friendly version that is text only that agents can read
+- Nice to have: MCP server or some kind of way for AI agents to interact with truffle, more and more people will be working through agents in the coming months so this is essential (but not necessary for the initial launch, do this if we have capacity)
