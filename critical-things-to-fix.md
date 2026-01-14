@@ -1,0 +1,16 @@
+- Git repositories are not actually being cloned at all right now - or at least during the initial provision. By extensions, deployments do not work.
+- The 'SSH' button on a VM does nothing
+- The 'git' and 'commands' cards on a VM sidebar serve no purpose and more or less just take up space for no reason
+- Logs should not appear until a VM is provisioned, as otherwise they just endlessly report errors as the VM doesn't 'exist'
+- The log window needs a button to open it out, similar to the web terminal, as otherwise it's very hard to view in the sidebar
+- Parallel provisioning does not work, no matter what it is set to when creating a new application it always does it one at a time
+- The 'Config' tab fails to load. Browser networking tools report a 404 when trying to retrieve the API data for that page. It eventually loads, but none of the config files defined in the initial setup appear, none of the bindings appear to be active, and the template configurations all show as 'No Template' despite grouping the VMs correctly
+- The bottom bar that appears when running a mass command on the 'Commands' tab should be vertically resizable and collapsable, similar to Proxmox's 'task' bar
+- There is no way to define services to auto start. When creating a new VM (maybe even as an option, e.g. 'Services', post provisioning), there should be a way to configure 'Services' that in the background create, setup and start the relevant systemd processes.
+- The settings menu has several bugs, if one menu item is allocated to the main subcategory and the others are within it (/settings/account for 'Profile' and /settings/account/api-keys for 'API Keys', for example), the first menu item (in this case 'Profile') will always be selected as well
+- The organization profile does nothing when changing its settings. They do not persist, not even changing the organization name
+- Audit logs do not update
+- The browser should remember the last opened Hypervisor (via cookie or localStorage), rather than defaulting to the 'first' one every time
+- Consider adding a template group filter to the 'Commands' tab  
+- The deploy tab does not show the correct git info, instead reporting as 'git@github.com:org/repo.git'
+- On 'Add Hypervisor', Proxmox is falsy marked as only supporting 7.x and 8.x, but 9.x has since released and is fully functional
